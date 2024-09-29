@@ -3,8 +3,29 @@
   <component name="AemProjectConfiguration">
     <option name="wasInitialized" value="true" />
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f9746a-c2a4-4bf7-bc69-ab24e37e3812" name="Changes" comment="" />
+    <list default="true" id="91f9746a-c2a4-4bf7-bc69-ab24e37e3812" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/authController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/chatController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/chatController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/messageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/messageController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/authRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/authRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/chatRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/chatRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/messageRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/messageRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/userRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/encryptionService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/encryptionService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/socketIO.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/socketIO.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,13 +35,99 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1725874206" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1725874205" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2k0ur9YGkD3y7hXwDpEaVkKVxxj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/abiym/IdeaProjects/Javascript/Kerr_Backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;MySQL&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\abiym\IdeaProjects\Javascript\Kerr_Backend" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Run" type="js.build_tools.npm" temporary="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.Run" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -30,11 +137,83 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1722354545959</updated>
-      <workItem from="1722354546996" duration="1000" />
+      <workItem from="1722354546996" duration="2521000" />
+      <workItem from="1722433014008" duration="5155000" />
+      <workItem from="1722845163741" duration="2958000" />
+      <workItem from="1722868188724" duration="1465000" />
+      <workItem from="1722884835650" duration="3845000" />
+      <workItem from="1722935216747" duration="2737000" />
+      <workItem from="1722969184298" duration="6589000" />
+      <workItem from="1723014619606" duration="3206000" />
+      <workItem from="1723105280127" duration="5611000" />
+      <workItem from="1723116963269" duration="6451000" />
+      <workItem from="1723123650508" duration="3806000" />
+      <workItem from="1723127540208" duration="38000" />
+      <workItem from="1723129237407" duration="296000" />
+      <workItem from="1723140443503" duration="3040000" />
+      <workItem from="1723189353137" duration="2253000" />
+      <workItem from="1723268228286" duration="7000" />
+      <workItem from="1723281202437" duration="12000" />
+      <workItem from="1723281283863" duration="7000" />
+      <workItem from="1723302850451" duration="600000" />
+      <workItem from="1723306468181" duration="2554000" />
+      <workItem from="1723312189516" duration="333000" />
+      <workItem from="1723546929541" duration="1792000" />
+      <workItem from="1723623496730" duration="1311000" />
+      <workItem from="1723822163953" duration="8828000" />
+      <workItem from="1723872718833" duration="2296000" />
+      <workItem from="1724349716822" duration="1430000" />
+      <workItem from="1724420171188" duration="60000" />
+      <workItem from="1724420244465" duration="9750000" />
+      <workItem from="1724494890413" duration="5568000" />
+      <workItem from="1725727782723" duration="7000" />
+      <workItem from="1725865941655" duration="1057000" />
+      <workItem from="1725873822931" duration="2090000" />
+      <workItem from="1725999486925" duration="4059000" />
+      <workItem from="1726048873632" duration="1984000" />
+      <workItem from="1726079107109" duration="8977000" />
+      <workItem from="1726127079362" duration="2351000" />
+      <workItem from="1726245083313" duration="2340000" />
+      <workItem from="1726253890298" duration="913000" />
+      <workItem from="1726304405531" duration="313000" />
+      <workItem from="1726314578539" duration="292000" />
+      <workItem from="1726319652617" duration="2974000" />
+      <workItem from="1726391746646" duration="312000" />
+      <workItem from="1726441188161" duration="2013000" />
+      <workItem from="1726595936891" duration="598000" />
+      <workItem from="1726605329009" duration="16000" />
+      <workItem from="1726607643426" duration="77000" />
+      <workItem from="1726607771190" duration="5000" />
+      <workItem from="1726608003318" duration="30000" />
+      <workItem from="1726608187338" duration="35000" />
+      <workItem from="1726608475033" duration="6000" />
+      <workItem from="1726608611646" duration="8000" />
+      <workItem from="1726608683824" duration="11000" />
+      <workItem from="1726608718384" duration="9000" />
+      <workItem from="1726610279413" duration="5000" />
+      <workItem from="1726610288336" duration="6000" />
+      <workItem from="1726610394726" duration="20000" />
+      <workItem from="1726611155425" duration="8000" />
+      <workItem from="1726611770957" duration="20000" />
+      <workItem from="1726612220053" duration="5000" />
+      <workItem from="1726612986853" duration="19000" />
+      <workItem from="1726942318413" duration="140000" />
+      <workItem from="1727539761583" duration="598000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
