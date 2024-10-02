@@ -7,24 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f9746a-c2a4-4bf7-bc69-ab24e37e3812" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="91f9746a-c2a4-4bf7-bc69-ab24e37e3812" name="Changes" comment="kl">
+      <change afterPath="$PROJECT_DIR$/src/controllers/jobController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/jobRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/chatController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/chatController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/messageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/messageController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/authRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/authRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/chatRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/chatRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/messageRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/messageRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/userRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/encryptionService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/encryptionService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/socketIO.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/socketIO.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +31,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -78,35 +67,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.11.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.11.1&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/abiym/IdeaProjects/Javascript/Kerr_Backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "20.11.1",
+    "javascript.nodejs.core.library.typings.version": "20.11.1",
+    "last_opened_file_path": "C:/Users/abiym/IdeaProjects/Javascript/Kerr_Backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\abiym\IdeaProjects\Javascript\Kerr_Backend" />
@@ -198,8 +188,18 @@
       <workItem from="1726612220053" duration="5000" />
       <workItem from="1726612986853" duration="19000" />
       <workItem from="1726942318413" duration="140000" />
-      <workItem from="1727539761583" duration="598000" />
+      <workItem from="1727539761583" duration="1299000" />
+      <workItem from="1727889435842" duration="16920000" />
     </task>
+    <task id="LOCAL-00001" summary="kl">
+      <option name="closed" value="true" />
+      <created>1727569037746</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727569037746</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,5 +215,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="kl" />
+    <option name="LAST_COMMIT_MESSAGE" value="kl" />
   </component>
 </project>

@@ -10,7 +10,7 @@ exports.name = async (req,res) => {
 
 exports.getUser = async (req, res) => {
     try {
-        const id = req.params.id
+        const {id} = req.params
         const [rows] = await pool.query('CALL sp_GetUserDetails(?)',[id]);
 
         res.json(rows);
