@@ -1,4 +1,19 @@
 const pool = require('../database');
+const {query} = require("express");
+
+exports.postJob = async (req,res) =>{
+    try{
+        const {userID,jobTitle,jobDescription,jobPrice,jobNegotiation,jobPublic} = req.body;
+        const query = 'CALL sp_InsertJob(?,?,?,?,?,?)';
+        const [rows] = await pool.query(query,[userID,jobTitle,jobDescription,jobPrice,jobNegotiation,jobPublic]);
+        res.status(201).send({jobID:rows[0]});
+
+    }catch(e){
+        console.log('Job Error: ',e);
+        res.status(500).send({message:"There was an issue with the server"});
+    }
+}
+
 
 exports.getAllJob = async (req,res) =>{
     try{
