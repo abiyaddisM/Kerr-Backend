@@ -4,12 +4,12 @@ const jwt = require('jsonwebtoken');
 
 exports.authUser = async (req,res) => {
     try {
+
         const { username, password } = req.body;
 
         if (!username || !password) {
             return res.status(400).json({ message: 'Please provide username and password' });
         }
-
 
         const query = 'CALL sp_GetUserPassword(?)';
 
