@@ -7,15 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91f9746a-c2a4-4bf7-bc69-ab24e37e3812" name="Changes" comment="kl">
-      <change afterPath="$PROJECT_DIR$/src/controllers/jobContractController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/uploadController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/jobContractRouters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/uploadRouters.js" afterDir="false" />
+    <list default="true" id="91f9746a-c2a4-4bf7-bc69-ab24e37e3812" name="Changes" comment="klsad">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/jobController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/jobController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/uploadController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/uploadController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/uploadRouters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/uploadRouters.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +192,8 @@
       <workItem from="1727998869503" duration="560000" />
       <workItem from="1727999455492" duration="9313000" />
       <workItem from="1728051741370" duration="9978000" />
+      <workItem from="1728102085791" duration="335000" />
+      <workItem from="1728147526216" duration="3138000" />
     </task>
     <task id="LOCAL-00001" summary="kl">
       <option name="closed" value="true" />
@@ -229,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728025649457</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="klsad">
+      <option name="closed" value="true" />
+      <created>1728102192232</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728102192232</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +254,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kl" />
-    <option name="LAST_COMMIT_MESSAGE" value="kl" />
+    <MESSAGE value="klsad" />
+    <option name="LAST_COMMIT_MESSAGE" value="klsad" />
   </component>
 </project>

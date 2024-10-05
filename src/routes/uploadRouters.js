@@ -18,6 +18,6 @@ router
     .post(upload.single('file'),postUpload)
 
 router
-    .route('/:image `')
+    .route('/:imageName')
     .get(getUpload)
 module.exports = router;

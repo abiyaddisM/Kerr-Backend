@@ -1,25 +1,20 @@
 const path = require('path');
 exports.postUpload = async (req,res) =>{
     try{
-        res.send({data:req.file})
+        res.send({url:"https://localhost:3000/api/v1/upload/" + req.file.filename})
     }catch(e){
         console.log('Upload Error: ',e);
         res.status(500).send({message:"There was an issue with the server"})
     }
 }
 exports.getUpload = async (req,res) => {
-    try{
-        const {image} = req.params;
-        const imagePath = path.join(__dirname, `src/upload/${image}`);
-        res.sendFile(imagePath, (err) => {
+        const {imageName} = req.params;
+        const imagePath = path.join(__dirname, '../../upload', imageName);
+
+        res.sendFile(imagePath, err => {
             if (err) {
-                res.status(err.status).end();
-            } else {
-                console.log('Sent:', imagePath);
+                console.log(err)
+                res.status(404).send('Image not found');
             }
         });
-    }catch(e){
-        console.log('Upload Error: ',e);
-        res.status(500).send({message:"There was an issue with the server"})
-    }
 }
