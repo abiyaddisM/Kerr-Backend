@@ -14,6 +14,9 @@ const chatRouter = require('./routes/chatRoutes');
 const messageRouter = require('./routes/messageRoutes');
 const jobRouter = require('./routes/jobRoutes')
 const jobBidRouter = require('./routes/jobBidRoutes')
+const jobContractRouter = require('./routes/jobContractRouters')
+const uploadRouter = require('./routes/uploadRouters')
+const path = require("path");
 
 app.use(cors());
 app.use(express.json());
@@ -24,5 +27,7 @@ app.use('/api/v1/chat',chatRouter);
 app.use('/api/v1/message',messageRouter);
 app.use('/api/v1/job',jobRouter);
 app.use('/api/v1/job-bid',jobBidRouter);
+app.use('/api/v1/job-contract',jobContractRouter);
+app.use('/api/v1/upload',uploadRouter);
 
 module.exports = server;

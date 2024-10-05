@@ -1,5 +1,4 @@
 const pool = require('../database');
-const {query} = require("express");
 
 exports.postJob = async (req,res) =>{
     try{
