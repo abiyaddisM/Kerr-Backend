@@ -8,10 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91f9746a-c2a4-4bf7-bc69-ab24e37e3812" name="Changes" comment="klsad">
+      <change afterPath="$PROJECT_DIR$/src/controllers/galleryController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/postController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/galleryRouters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/postRouters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/jobController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/jobController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/uploadController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/uploadController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/jobRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/jobRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/uploadRouters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/uploadRouters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/userRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +201,12 @@
       <workItem from="1727999455492" duration="9313000" />
       <workItem from="1728051741370" duration="9978000" />
       <workItem from="1728102085791" duration="335000" />
-      <workItem from="1728147526216" duration="3138000" />
+      <workItem from="1728147526216" duration="3957000" />
+      <workItem from="1728168400692" duration="998000" />
+      <workItem from="1728178267080" duration="601000" />
+      <workItem from="1728212794275" duration="1114000" />
+      <workItem from="1728219245904" duration="5273000" />
+      <workItem from="1728238155217" duration="3547000" />
     </task>
     <task id="LOCAL-00001" summary="kl">
       <option name="closed" value="true" />
@@ -235,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728102192232</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="klsad">
+      <option name="closed" value="true" />
+      <created>1728151623232</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728151623232</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

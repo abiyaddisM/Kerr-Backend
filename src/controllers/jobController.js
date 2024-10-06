@@ -26,3 +26,14 @@ exports.getAllJob = async (req,res) =>{
         res.status(500).send({message:"error from the server"});
     }
 }
+exports.postJobCompletionRequest = async (req,res) =>{
+    try{
+        const {jobID} = req.params;
+        const {userID} = req.body;
+        const query = "CALL sp_InsertJobCompletionRequest(?,?)";
+        const [rows] = await pool.query(query,[userID,jobID]);
+    }catch(e){
+        console.log(' Error: ',e);
+        res.status(500).send({message:"There was an issue with the server"})
+    }
+}

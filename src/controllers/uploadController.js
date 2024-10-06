@@ -2,6 +2,7 @@ const path = require('path');
 exports.postUpload = async (req,res) =>{
     try{
         res.send({url:"https://localhost:3000/api/v1/upload/" + req.file.filename})
+        console.log(req.file)
     }catch(e){
         console.log('Upload Error: ',e);
         res.status(500).send({message:"There was an issue with the server"})
@@ -9,7 +10,7 @@ exports.postUpload = async (req,res) =>{
 }
 exports.getUpload = async (req,res) => {
         const {imageName} = req.params;
-        const imagePath = path.join(__dirname, '../../upload', imageName);
+        const imagePath = path.join(__dirname, '../upload', imageName);
 
         res.sendFile(imagePath, err => {
             if (err) {

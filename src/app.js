@@ -16,7 +16,7 @@ const jobRouter = require('./routes/jobRoutes')
 const jobBidRouter = require('./routes/jobBidRoutes')
 const jobContractRouter = require('./routes/jobContractRouters')
 const uploadRouter = require('./routes/uploadRouters')
-const path = require("path");
+const postRouter = require('./routes/postRouters')
 
 app.use(cors());
 app.use(express.json());
@@ -29,6 +29,7 @@ app.use('/api/v1/job',jobRouter);
 app.use('/api/v1/job-bid',jobBidRouter);
 app.use('/api/v1/job-contract',jobContractRouter);
 app.use('/api/v1/upload',uploadRouter);
+app.use('/api/v1/post',postRouter);
 
 
 

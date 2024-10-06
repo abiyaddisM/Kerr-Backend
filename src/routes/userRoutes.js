@@ -1,13 +1,27 @@
 const express = require("express");
 const router = express.Router();
-const userController = require('../controllers/userController')
+const {postUser,getUser,getUserPost,getUserRating,postUserRating,getAllUserCompleteRequest} = require('../controllers/userController')
 router
     .route('/')
-    .post(userController.postUser)
+    .post(postUser)
 
 router
     .route('/:id')
-        .get(userController.getUser)
+    .get(getUser)
 
+router
+    .route('/:id/post')
+    .get(getUserPost)
 
+router
+    .route('/:id/rating')
+    .get(getUserRating)
+
+router
+    .route('/rating')
+    .post(postUserRating)
+
+router
+    .route('/:id/complete')
+    .get(getAllUserCompleteRequest)
 module.exports =  router;

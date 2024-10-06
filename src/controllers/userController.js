@@ -33,3 +33,50 @@ exports.postUser = async (req,res) =>{
     }
 }
 
+exports.getUserPost = async (req,res) =>{
+    try{
+        const {id} = req.params;
+        const query = "CALL sp_GetUserPost(?)";
+        const [rows] = await pool.query(query,[id]);
+        res.status(200).send({data:rows[0]});
+
+    }catch(e){
+        console.log('post Error: ',e);
+        res.status(500).send({message:"There was an issue with the server"})
+    }
+}
+
+exports.getUserRating = async (req,res) =>{
+    try{
+        const {id} = req.params;
+        const query = "CALL sp_GeUserRatting(?)";
+        const [rows] = await pool.query(query,[id]);
+        res.status(200).send({data:rows[0]});
+    }catch(e){
+        console.log(' Error: ',e);
+        res.status(500).send({message:"There was an issue with the server"})
+    }
+}
+exports.postUserRating = async (req,res) =>{
+    try{
+        const {userID,jobID,rating,comment} = req.body;
+        const query = "CALL sp_InsertUserRatting(?,?,?,?)";
+        const [rows] = await pool.query(query,[userID,jobID,rating,comment]);
+        res.status(201).send({data:rows[0]});
+    }catch(e){
+        console.log(' Error: ',e);
+        res.status(500).send({message:"There was an issue with the server"})
+    }
+}
+
+exports.getAllUserCompleteRequest = async (req,res) =>{
+    try{
+        const{id} = req.params;
+        const query = "CALL sp_GetJobCompletionRequest_Sender(?)";
+        const [rows] = await pool.query(query,[id]);
+        res.status(200).send({data:rows});
+    }catch(e){
+        console.log(' Error: ',e);
+        res.status(500).send({message:"There was an issue with the server"})
+    }
+}
