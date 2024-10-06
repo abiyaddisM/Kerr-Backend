@@ -1,7 +1,7 @@
 const path = require('path');
 exports.postUpload = async (req,res) =>{
     try{
-        res.send({url:"https://localhost:3000/api/v1/upload/" + req.file.filename})
+        res.send({url:"https://auth.bizawit.com/api/v1/upload/" + req.file.filename})
         console.log(req.file)
     }catch(e){
         console.log('Upload Error: ',e);
