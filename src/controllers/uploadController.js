@@ -10,7 +10,7 @@ exports.postUpload = async (req,res) =>{
 }
 exports.getUpload = async (req,res) => {
         const {imageName} = req.params;
-        const imagePath = path.join(__dirname, '../../upload', imageName);
+        const imagePath = path.join(__dirname, '../upload', imageName);
 
         res.sendFile(imagePath, err => {
             if (err) {
