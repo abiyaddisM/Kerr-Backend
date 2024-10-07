@@ -14,6 +14,7 @@ const chatRouter = require('./routes/chatRoutes');
 const messageRouter = require('./routes/messageRoutes');
 const jobRouter = require('./routes/jobRoutes')
 const jobBidRouter = require('./routes/jobBidRoutes')
+const jobOfferRouter = require('./routes/jobOfferRouters')
 const jobContractRouter = require('./routes/jobContractRouters')
 const uploadRouter = require('./routes/uploadRouters')
 const postRouter = require('./routes/postRouters')
@@ -27,6 +28,7 @@ app.use('/api/v1/chat',chatRouter);
 app.use('/api/v1/message',messageRouter);
 app.use('/api/v1/job',jobRouter);
 app.use('/api/v1/job-bid',jobBidRouter);
+app.use('/api/v1/job-offer',jobOfferRouter);
 app.use('/api/v1/job-contract',jobContractRouter);
 app.use('/api/v1/upload',uploadRouter);
 app.use('/api/v1/post',postRouter);

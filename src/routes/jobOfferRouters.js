@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const {} = require( '../controllers/jobOfferController');
+const {getJobOffer,postJobOffer} = require( '../controllers/jobOfferController');
 
 router
     .route('/')
-    .get()
+    .get(getJobOffer)
+    .post(postJobOffer)
 
 module.exports = router;
