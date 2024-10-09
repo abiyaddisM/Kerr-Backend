@@ -16,9 +16,9 @@ exports.postJob = async (req,res) =>{
 exports.getJob = async (req,res) =>{
     try{
         const {id} = req.params
-        const query = 'CALL sp_GetJobs(?)';
+        const query = 'CALL sp_GetJob(?)';
         const [rows] = await pool.query(query,[id]);
-        res.send({data:rows[0]})
+        res.status(200).send({data:rows[0]})
     }catch (error) {
         console.log(error)
         res.status(500).send({message:"error from the server"});
