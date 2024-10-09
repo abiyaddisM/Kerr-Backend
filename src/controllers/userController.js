@@ -59,7 +59,8 @@ exports.getUserRating = async (req,res) =>{
 }
 exports.postUserRating = async (req,res) =>{
     try{
-        const {userID,jobID,rating,comment} = req.body;
+        const {userID} = req.params;
+        const {jobID,rating,comment} = req.body;
         const query = "CALL sp_InsertUserRatting(?,?,?,?)";
         const [rows] = await pool.query(query,[userID,jobID,rating,comment]);
         res.status(201).send({data:rows[0]});

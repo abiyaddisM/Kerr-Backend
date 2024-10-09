@@ -16,12 +16,9 @@ router
 router
     .route('/:id/rating')
     .get(getUserRating)
-
-router
-    .route('/rating')
     .post(postUserRating)
 
 router
     .route('/:id/complete')
-    .get(getAllUserCompleteRequest)
+    .get(getAllUserCompleteRequest  )
 module.exports =  router;
