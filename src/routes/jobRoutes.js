@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {getAllJob,postJob,postJobCompletionRequest,getJobBid} = require( '../controllers/jobController.js');
+const {getAllJob,postJob,postJobCompletionRequest,getJobBid,getJobOffer} = require( '../controllers/jobController.js');
 
 router
     .route('/')
@@ -14,5 +14,9 @@ router
 router
     .route('/:id/job-bid')
     .get(getJobBid)
+
+router
+    .route('/:id/job-offer')
+    .get(getJobOffer)
 
 module.exports = router;

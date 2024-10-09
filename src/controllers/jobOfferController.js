@@ -15,13 +15,8 @@ exports.postJobOffer = async (req,res) =>{
 
 exports.getJobOffer = async (req,res) =>{
     try{
-        const {userID,type} = req.query;
-        let query = ''
-        if(type === "sender"){
-            query = 'CALL sp_GetJobOffer_Receiver(?)'
-        }else{
-            query = 'CALL sp_GetJobOffer_Sender(?)'
-        }
+        const {userID} = req.query;
+        let query = 'CALL sp_GetJobOffer_Receiver(?)'
         const [rows] = await pool.query(query,[userID]);
         res.status(200).send({data:rows[0]});
 
