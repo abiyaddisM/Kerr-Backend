@@ -1,11 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const {getAllJob,postJob,postJobCompletionRequest,getJobBid,getJobOffer} = require( '../controllers/jobController.js');
+const {getJob,getAllJob,postJob,postJobCompletionRequest,getJobBid,getJobOffer} = require( '../controllers/jobController.js');
 
 router
     .route('/')
     .get(getAllJob)
     .post(postJob)
+
+router
+    .route('/id')
+    .get(getJob)
+
 
 router
     .route('/:id/complete')

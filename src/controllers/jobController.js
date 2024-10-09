@@ -13,7 +13,17 @@ exports.postJob = async (req,res) =>{
     }
 }
 
-
+exports.getJob = async (req,res) =>{
+    try{
+        const {id} = req.params
+        const query = 'CALL sp_GetJobs(?)';
+        const [rows] = await pool.query(query,[id]);
+        res.send({data:rows[0]})
+    }catch (error) {
+        console.log(error)
+        res.status(500).send({message:"error from the server"});
+    }
+}
 exports.getAllJob = async (req,res) =>{
     try{
         const {search = '',rating = 0,rate = 0} = req.params;
