@@ -2,9 +2,9 @@ const pool = require("../database")
 exports.getPost = async (req,res) =>{
     try{
         const {id} = req.params;
-        // const query = "CALL sp_GetPost(?)";
-        // const [rows] = await pool.query(query,[userID]);
-        // res.status(200).send({data:rows[0]});
+        const query = "CALL sp_GetPost(?)";
+        const [rows] = await pool.query(query,[id]);
+        res.status(200).send({data:rows[0]});
 
     }catch(e){
         console.log('post Error: ',e);
