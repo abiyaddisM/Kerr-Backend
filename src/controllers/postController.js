@@ -15,8 +15,8 @@ exports.getPost = async (req,res) =>{
 exports.postPost = async (req,res) =>{
     try{
         const {userId, postTitle, postCaption, postThumbnail, postImage} = req.body;
-        const query = "CALL sp_InsertPost(?)";
-        const [rows] = await pool.query(query,[userId, postTitle, postCaption, postThumbnail, postImage]);
+        const query = "CALL sp_InsertPost(?,?,?,?,?)";
+        const [rows] = await pool.query(query,[userId, postTitle, postCaption, postThumbnail, JSON.stringify(postImage)]);
         res.status(201).send({postID:rows[0]});
     }catch(e){
         console.log('Post Error: ',e);
