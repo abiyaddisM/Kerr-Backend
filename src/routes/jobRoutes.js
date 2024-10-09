@@ -8,7 +8,7 @@ router
     .post(postJob)
 
 router
-    .route('/id')
+    .route('/:id')
     .get(getJob)
 
 
