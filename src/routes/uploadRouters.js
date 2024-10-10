@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
             cb(null,uniqueSuffix + '-' + file.originalname );
     }
 })
-const upload = multer({storage});
+const upload = multer({storage:storage,limits: { fileSize: Infinity }});
 router
     .route('/')
     .post(upload.single('file'),postUpload)
