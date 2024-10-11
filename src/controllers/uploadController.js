@@ -1,6 +1,7 @@
 const path = require('path');
 exports.postUpload = async (req,res) =>{
     try{
+        console.log("ppp")
         res.send({url:"https://auth.bizawit.com/api/v1/upload/" + req.file.filename})
         console.log(req.file)
     }catch(e){

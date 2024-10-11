@@ -1,11 +1,13 @@
 const express = require("express");
-const path = require('path');
+const fs = require('fs');
+    const path = require('path');
 const router = express.Router();
 const {postUpload,getUpload} = require( '../controllers/uploadController');
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         try {
+            console.log("ss")
             const uploadPath = path.join(__dirname, '..', 'upload');
 
             // Check if the directory exists, if not, create it
@@ -32,7 +34,7 @@ const storage = multer.diskStorage({
         }
     }
 });
-const upload = multer({storage:storage,limits: { fileSize: Infinity }});
+const upload = multer({storage});
 router
     .route('/')
     .post(upload.single('file'),postUpload)
