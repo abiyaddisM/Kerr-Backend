@@ -1,8 +1,37 @@
 const path = require('path');
+const fs = require('fs');
+const sharp = require('sharp');
+
 exports.postUpload = async (req,res) =>{
     try{
-        console.log("ppp")
-        res.send({url:"https://auth.bizawit.com/api/v1/upload/" + req.file.filename})
+        const file = req.file;
+        if (!file) {
+            return res.status(400).json({ message: 'No file uploaded' });
+        }
+
+        // Paths for saving the original and resized images
+        const originalPath = path.join(__dirname, '..', 'upload', 'original', file.filename);
+        const compressedPath = path.join(__dirname, '..', 'upload', '300', file.filename);
+
+        // Ensure the directories exist
+        const originalDir = path.join(__dirname, '..', 'upload', 'original');
+        const compressedDir = path.join(__dirname, '..', 'upload', '300');
+        if (!fs.existsSync(originalDir)) {
+            fs.mkdirSync(originalDir, { recursive: true });
+        }
+        if (!fs.existsSync(compressedDir)) {
+            fs.mkdirSync(compressedDir, { recursive: true });
+        }
+
+        // Move the original file to the original directory
+        fs.renameSync(file.path, originalPath);
+
+        // Resize the image to 300px width and save to the compressed directory
+        await sharp(originalPath)
+            .resize({ width: 300 }) // Resize to 300px width
+            .toFile(compressedPath);
+
+        res.send({url: req.file.filename})
         console.log(req.file)
     }catch(e){
         console.log('Upload Error: ',e);
