@@ -11,11 +11,11 @@ exports.postUpload = async (req,res) =>{
 
         // Paths for saving the original and resized images
         const originalPath = path.join(__dirname, '..', 'upload', 'original', file.filename);
-        const compressedPath = path.join(__dirname, '..', 'upload', '300', file.filename);
+        const compressedPath = path.join(__dirname, '..', 'upload', '600', file.filename);
 
         // Ensure the directories exist
         const originalDir = path.join(__dirname, '..', 'upload', 'original');
-        const compressedDir = path.join(__dirname, '..', 'upload', '300');
+        const compressedDir = path.join(__dirname, '..', 'upload', '600');
         if (!fs.existsSync(originalDir)) {
             fs.mkdirSync(originalDir, { recursive: true });
         }
@@ -28,7 +28,7 @@ exports.postUpload = async (req,res) =>{
 
         // Resize the image to 300px width and save to the compressed directory
         await sharp(originalPath)
-            .resize({ width: 300 }) // Resize to 300px width
+            .resize({ width: 600 }) // Resize to 300px width
             .toFile(compressedPath);
 
         res.send({url: req.file.filename})
