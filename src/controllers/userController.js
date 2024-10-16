@@ -26,7 +26,7 @@ exports.postUser = async (req,res) =>{
         const {username,password,firstName,lastName,profilePicture,phone,email,gender,location,industry,experience} = req.body;
         const encryptPass = await encryptionService.hashPassword(password);
         const query = 'CALL sp_InsertUser(?,?,?,?,?,?,?,?,?,?,?)'
-        await pool.query(query,[username,password,firstName,lastName,profilePicture,phone,email,gender,location,industry,experience]);
+        await pool.query(query,[username,encryptPass,firstName,lastName,profilePicture,phone,email,gender,location,industry,experience]);
         console.log("Works")
         res.status(201).send("works");
     }catch (error){
