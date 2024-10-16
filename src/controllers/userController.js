@@ -27,8 +27,10 @@ exports.postUser = async (req,res) =>{
         const encryptPass = await encryptionService.hashPassword(password);
         const query = 'CALL sp_InsertUser(?,?,?,?,?,?,?,?,?,?,?)'
         await pool.query(query,[username,password,firstName,lastName,profilePicture,phone,email,gender,location,industry,experience]);
+        console.log("Works")
         res.status(201).send("works");
     }catch (error){
+        console.log(error)
         res.status(500).json({ error: 'Failed to register user' ,message:error});
     }
 }
