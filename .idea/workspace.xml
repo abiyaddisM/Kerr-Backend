@@ -9,7 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="91f9746a-c2a4-4bf7-bc69-ab24e37e3812" name="Changes" comment="klsad">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/jobBidRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/jobBidRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +212,7 @@
       <workItem from="1729014913438" duration="4251000" />
       <workItem from="1729033361855" duration="1209000" />
       <workItem from="1729068898107" duration="10192000" />
-      <workItem from="1729321729094" duration="9439000" />
+      <workItem from="1729321729094" duration="10871000" />
     </task>
     <task id="LOCAL-00001" summary="kl">
       <option name="closed" value="true" />
@@ -471,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729344860383</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="klsad">
+      <option name="closed" value="true" />
+      <created>1729345488661</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1729345488661</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
