@@ -10,4 +10,5 @@ router
 router
     .route('/:id')
     .delete(deleteBid)
+
 module.exports = router;

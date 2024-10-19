@@ -12,7 +12,7 @@ router
     .get(getJob)
 
 router
-    .route('/:id'/'job-contract')
+    .route('/:id/job-contract')
     .post(postJobContract)
 router
     .route('/:id/complete')
