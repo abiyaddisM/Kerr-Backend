@@ -23,3 +23,16 @@ exports.getJobBid = async (req,res) =>{
         res.status(500).send({message:"There was an issue with the server"})
     }
 }
+
+exports.deleteBid = async (req,res) =>{
+    try{
+        const {id} = req.params;
+        const query = "CALL sp_DeleteJobBid(?)";
+        await pool.query(query,[id]);
+        res.status(200).send({message:"success"});
+
+    }catch(e){
+        console.log(' Error: ',e);
+        res.status(500).send({message:"There was an issue with the server"})
+    }
+}

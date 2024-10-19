@@ -72,3 +72,16 @@ exports.getJobOffer = async (req,res) =>{
         res.status(500).send({message:"There was an issue with the server"})
     }
 }
+
+exports.postJobContract = async (req,res) =>{
+    try{
+        const {id} = req.params;
+        const {clientID,freelanceID} = req.body;
+        const query = "CALL sp_InsertJobContract(?,?,?)";
+        const [rows] = await pool.query(query,[clientID,freelanceID,id]);
+        res.status(201).send({data:rows[0]});
+    }catch(e){
+        console.log('Job Contract Error: ',e);
+        res.status(500).send({message:"There was an issue with the server"})
+    }
+}
