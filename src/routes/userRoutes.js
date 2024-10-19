@@ -20,5 +20,5 @@ router
 
 router
     .route('/:id/complete')
-    .get(getAllUserCompleteRequest  )
+    .get(getAllUserCompleteRequest)
 module.exports =  router;

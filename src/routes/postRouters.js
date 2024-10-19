@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {getPost,postPost,getAllPost} = require( '../controllers/postController');
+const {getPost,postPost,getAllPost,updatePostView} = require( '../controllers/postController');
 
 router
     .route('/')
@@ -10,4 +10,8 @@ router
 router
     .route('/:id')
     .get(getPost)
+router
+    .route('/:id/view')
+    .path(updatePostView)
+
 module.exports = router;
