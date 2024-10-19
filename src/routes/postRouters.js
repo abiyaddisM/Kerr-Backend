@@ -12,6 +12,6 @@ router
     .get(getPost)
 router
     .route('/:id/view')
-    .path(updatePostView)
+    .patch(updatePostView)
 
 module.exports = router;
