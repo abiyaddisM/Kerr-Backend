@@ -35,7 +35,7 @@ app.use('/api/v1/job-contract',jobContractRouter);
 app.use('/api/v1/upload',uploadRouter);
 app.use('/api/v1/post',postRouter);
 app.use('/api/v1/gallery',galleryRouter);
-app.use('/api/v1/search', searchRouter)
+app.use('/api/v1/search',searchRouter);
 
 
 
