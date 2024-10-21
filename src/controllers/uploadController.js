@@ -42,9 +42,9 @@ exports.getUpload = async (req,res) => {
         const {imageName,type} = req.params;
         const imagePath = path.join(__dirname, '../upload',type,imageName);
         res.setHeader('Content-Disposition', `attachment; filename="${imageName}"`);
-        res.sendFile(imagePath, err => {
+        res.download(imagePath, imageName, (err) => {
             if (err) {
-                console.log(err)
+                console.log(err);
                 res.status(404).send('Image not found');
             }
         });
