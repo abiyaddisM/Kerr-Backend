@@ -13,8 +13,8 @@ exports.postChat = async (req,res)=>{
     try{
         const {user1ID,user2ID} = req.body;
         const query = 'CALL sp_InsertChat(?,?)';
-        await pool.query(query,[user1ID,user2ID]);
-        res.status(201).send("Created");
+        const [rows] = await pool.query(query,[user1ID,user2ID]);
+        res.status(201).send({data:rows[0]});
    }catch (error){
         res.status(500).json(error);
     }
