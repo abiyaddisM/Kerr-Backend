@@ -41,7 +41,7 @@ exports.postJobCompletionRequest = async (req,res) =>{
         const {id} = req.params;
         const {userID,image,message} = req.body;
         const query = "CALL sp_InsertJobCompletionRequest(?,?,?,?)";
-        const [rows] = await pool.query(query,[userID,jobID,image,message]);
+        const [rows] = await pool.query(query,[userID,id,image,message]);
     }catch(e){
         console.log(' Error: ',e);
         res.status(500).send({message:"There was an issue with the server"});
