@@ -109,3 +109,15 @@ exports.finishJob = async (req,res) =>{
         res.status(500).send({message:"There was an issue with the server"})
     }
 }
+exports.deleteJob = async (req, res) => {
+    try{
+        const {id} = req.params;
+        const query = "CALL sp_DeleteJob(?)";
+        await pool.query(query, [id])
+        res.status(200).send({message:"Job deleted"});
+    }
+    catch (e) {
+        console.log('Job not deleted', e)
+        res.status(500).send({message: "There was an issue with the server"})
+    }
+}

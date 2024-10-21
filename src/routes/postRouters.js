@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {getPost,postPost,getAllPost,updatePostView} = require( '../controllers/postController');
+const {getPost,postPost,getAllPost,updatePostView,deletePost} = require( '../controllers/postController');
 
 router
     .route('/')
@@ -10,6 +10,7 @@ router
 router
     .route('/:id')
     .get(getPost)
+    .delete(deletePost)
 router
     .route('/:id/view')
     .patch(updatePostView)

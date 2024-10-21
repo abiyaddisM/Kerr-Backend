@@ -24,3 +24,22 @@ exports.getGallery = async (req,res) =>{
     }
 }
 
+exports.deleteGallery = async (req, res) => {
+    try{
+        const {id} = req.params;
+        const postID = req.query.postID
+
+        if(!id || !postID){
+            return res.status(500).send({message:"parameter not valid"})
+        }
+        const query = "CALL sp_DeleteGallery(?, ?)"
+        await pool.query(query, [id, postID])
+        console.log(postID)
+        res.status(200).send({message:"Post deleted"} );
+    }
+    catch (e) {
+        console.log('Post not deleted', e)
+        res.status(500).send({message: "There was an issue with the server"})
+
+    }
+}

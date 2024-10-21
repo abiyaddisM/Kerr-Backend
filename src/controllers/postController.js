@@ -47,3 +47,15 @@ exports.updatePostView = async (req,res) =>{
         res.status(500).send({message:"There was an issue with the server"})
     }
 }
+exports.deletePost = async (req, res) => {
+    try{
+        const {id} = req.params
+        const query = "CALL sp_DeletePost(?)";
+        await pool.query(query, [id])
+        res.status(200).send({message:"Post deleted"});
+    }
+    catch (e) {
+        console.log('Post not deleted', e)
+        res.status(500).send({message: "There was an issue with the server"})
+    }
+}

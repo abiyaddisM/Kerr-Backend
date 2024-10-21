@@ -1,7 +1,7 @@
 
 const express = require("express");
 const router = express.Router();
-const {postGallery,getGallery} = require( '../controllers/galleryController');
+const {postGallery,getGallery,deleteGallery} = require( '../controllers/galleryController');
 
 router
     .route('/')
@@ -10,4 +10,5 @@ router
 router
     .route('/:id')
     .get(getGallery)
+    .delete(deleteGallery)
 module.exports = router;
