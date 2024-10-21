@@ -19,6 +19,7 @@ const jobContractRouter = require('./routes/jobContractRouters')
 const uploadRouter = require('./routes/uploadRouters')
 const postRouter = require('./routes/postRouters')
 const galleryRouter = require('./routes/galleryRouters')
+const searchRouter = require('./routes/searchRoutes')
 
 app.use(cors());
 app.use(express.json());
@@ -34,6 +35,7 @@ app.use('/api/v1/job-contract',jobContractRouter);
 app.use('/api/v1/upload',uploadRouter);
 app.use('/api/v1/post',postRouter);
 app.use('/api/v1/gallery',galleryRouter);
+app.use('/api/v1/search', searchRouter)
 
 
 
