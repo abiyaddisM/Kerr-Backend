@@ -12,6 +12,7 @@ firebase.json
 .firebase
 node_modules
 dist
+src/upload
 dist-ssr
 *.local
 
