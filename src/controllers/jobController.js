@@ -96,3 +96,16 @@ exports.postJobContract = async (req,res) =>{
         res.status(500).send({message:"There was an issue with the server"})
     }
 }
+
+
+exports.finishJob = async (req,res) =>{
+    try{
+        const {id} = req.params;
+        const query = "CALL sp_UpdateJob(?)";
+        await pool.query(query,[id]);
+        res.send({message: "Updated Successfully"})
+    }catch(e){
+        console.log(' Error: ',e);
+        res.status(500).send({message:"There was an issue with the server"})
+    }
+}
