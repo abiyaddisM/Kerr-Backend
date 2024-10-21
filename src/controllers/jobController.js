@@ -48,7 +48,17 @@ exports.postJobCompletionRequest = async (req,res) =>{
         res.status(500).send({message:"There was an issue with the server"});
     }
 }
-
+exports.getJobCompletionRequest = async (req,res) =>{
+    try{
+        const {id} = req.params;
+        const query = "CALL sp_GetJobCompletionRequest_Receivers(?)";
+        const [rows] = await pool.query(query,[id]);
+        res.send({data:rows[0]}).status(200)
+    }catch(e){
+        console.log(' Error: ',e);
+        res.status(500).send({message:"There was an issue with the server"});
+    }
+}
 exports.getJobBid = async (req,res) =>{
     try{
         const {id} = req.params;
