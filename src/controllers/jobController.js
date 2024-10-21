@@ -38,7 +38,7 @@ exports.getAllJob = async (req,res) =>{
 }
 exports.postJobCompletionRequest = async (req,res) =>{
     try{
-        const {jobID} = req.params;
+        const {id} = req.params;
         const {userID,image,message} = req.body;
         const query = "CALL sp_InsertJobCompletionRequest(?,?,?,?)";
         const [rows] = await pool.query(query,[userID,jobID,image,message]);
