@@ -28,7 +28,7 @@ exports.postMessage = async (req,res)=>{
             message_text:messageText,
             message_image:messageImage,
             messageType,
-            timestamp: rows[0].timestamp
+            created_at: rows[0].timestamp
         };
         console.log(rows[0].otherUserID)
         io.to(rows[0].otherUserID).emit('message',newMessage);
