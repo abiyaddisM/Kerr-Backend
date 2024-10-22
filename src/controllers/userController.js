@@ -19,7 +19,18 @@ exports.getUser = async (req, res) => {
         return res.status(500).send('Error fetching users');
     }
 };
-
+exports.getUserJob = async (req,res) =>{
+    try{
+        const {id} = req.params;
+        const {type = 0} = req.query;
+        const query = 'CALL sp_GetUserJobs(?,?)';
+        const [rows] = await pool.query(query,type);
+        res.send({data:rows[0]}).status(200);
+    }catch (error) {
+        console.log(error)
+        res.status(500).send({message:"error from the server"});
+    }
+}
 
 exports.postUser = async (req,res) =>{
     try{

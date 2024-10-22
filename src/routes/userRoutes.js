@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {postUser,getUser,getUserPost,getUserRating,postUserRating,getAllUserCompleteRequest} = require('../controllers/userController')
+const {postUser,getUser,getUserPost,getUserRating,postUserRating,getAllUserCompleteRequest,getUserJob} = require('../controllers/userController')
 router
     .route('/')
     .post(postUser)
@@ -12,6 +12,10 @@ router
 router
     .route('/:id/post')
     .get(getUserPost)
+
+router
+    .route('/:id/job')
+    .get(getUserJob)
 
 router
     .route('/:id/rating')

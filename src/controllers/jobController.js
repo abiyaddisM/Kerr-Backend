@@ -40,6 +40,7 @@ exports.getAllJob = async (req,res) =>{
         res.status(500).send({message:"error from the server"});
     }
 }
+
 exports.postJobCompletionRequest = async (req,res) =>{
     try{
         const {id} = req.params;
