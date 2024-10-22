@@ -30,7 +30,7 @@ exports.postMessage = async (req,res)=>{
             messageType,
             created_at: rows[0].timestamp
         };
-        console.log(rows[0].otherUserID)
+        console.log(rows[0])
         io.to(rows[0].otherUserID).emit('message',newMessage);
         res.status(201).send('rows');
           }catch (error){
