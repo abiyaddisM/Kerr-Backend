@@ -24,7 +24,7 @@ exports.getUserJob = async (req,res) =>{
         const {id} = req.params;
         const {type = 0} = req.query;
         const query = 'CALL sp_GetUserJobs(?,?)';
-        const [rows] = await pool.query(query,type);
+        const [rows] = await pool.query(query,[id,type]);
         res.send({data:rows[0]}).status(200);
     }catch (error) {
         console.log(error)
