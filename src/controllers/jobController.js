@@ -2,9 +2,13 @@ const pool = require('../database');
 
 exports.postJob = async (req,res) =>{
     try{
-        const {userID,jobTitle,jobDescription,jobPrice,jobNegotiation,jobPublic} = req.body;
+        const {userID,jobTitle,jobDescription,jobPrice,jobNegotiation,jobPublic,tag = []} = req.body;
         const query = 'CALL sp_InsertJob(?,?,?,?,?,?)';
         const [rows] = await pool.query(query,[userID,jobTitle,jobDescription,jobPrice,jobNegotiation,jobPublic]);
+        for (const t of tag) {
+            const query = 'CALL sp_InsertTag(?,?)';
+            await pool.query(query,[rows[0][0]['new_job_id'],t]);
+        }
         res.status(201).send({jobID:rows[0]});
 
     }catch(e){
