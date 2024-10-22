@@ -20,7 +20,6 @@ exports.postMessage = async (req,res)=>{
         const query = 'CALL sp_InsertMessage(?,?,?,?,?, @insertedMessageID, @otherUserID,@timestamp)';
         await pool.query(query,[userID,chatID,messageText,JSON.stringify(messageImage),messageType]);
         const [rows] = await pool.query('SELECT @insertedMessageID AS messageID, @otherUserID AS otherUserID','@timestamp AS timestamp');
-        console.log(req.body)
         const newMessage = {
             id: rows[0].messageID,
             user_id:userID,
@@ -30,7 +29,7 @@ exports.postMessage = async (req,res)=>{
             messageType,
             created_at: rows[0].timestamp
         };
-        console.log(rows[0])
+        console.log("The rowas",rows[0])
         io.to(rows[0].otherUserID).emit('message',newMessage);
         res.status(201).send('rows');
           }catch (error){
