@@ -20,12 +20,12 @@ exports.initializeSocket  = (server)=>{
             console.log(room)
         })
 
-        socket.on('online',(room)=>{
+        socket.on('online',({room,id})=>{
             socket.join(room)
-            io.to(room).emit('online',{online:true});
+            io.to(room).emit('online',{online:true,userID:id});
             console.log(room, "Has joined and is Online")
         })
-        socket.on('joinOnlineRoom',(room)=>{
+        socket.on('joinOnlineRoom',({room})=>{
             socket.join(room)
             console.log(room, "Someone has joined To see you")
         })
