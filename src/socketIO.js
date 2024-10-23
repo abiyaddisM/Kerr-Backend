@@ -27,8 +27,10 @@ exports.initializeSocket  = (server)=>{
             console.log(room, "Has joined and is Online")
         })
 
-        socket.on('joinOnlineRoom',({room})=>{
+        socket.on('joinOnlineRoom',({room,id})=>{
             socket.join(room)
+            const isOnline = Object.values(onlineUsers).includes(id);
+            socket.emit('userOnlineStatus', { id, online: isOnline });
             console.log(room, "Someone has joined To see you")
         })
 
