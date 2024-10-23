@@ -28,14 +28,13 @@ exports.initializeSocket  = (server)=>{
 
         socket.on('joinOnlineRoom',({room,id})=>{
             socket.join(room)
-            const isOnline = Object.values(onlineUsers).includes(id);
+            const isOnline = Object.values(GlobalData.onlineUsers).includes(id);
             socket.to(room).emit('userOnlineStatus', { id, online: isOnline });
             console.log(room, "Someone has joined To see you")
         })
 
         socket.on('disconnect', () => {
             const userID = GlobalData.onlineUsers[socket.id]; // Get user ID from the mapping
-            GlobalD
             if (userID) {
                 // Optionally, you can find the room here if you need to notify specific rooms
                 io.to('online-' + userID).emit('online', { online: false, userID }); // Notify others that the user has gone offline
