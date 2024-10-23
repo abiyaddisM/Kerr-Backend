@@ -25,10 +25,16 @@ exports.initializeSocket  = (server)=>{
             io.to(room).emit('online',{online:true,userID:id});
             console.log(room, "Has joined and is Online")
         })
+        socket.on('offline',({room,id})=>{
+            io.to(room).emit('online',{online:false,userID:id});
+            socket.join(room)
+            console.log(room, "Someone has left")
+        })
         socket.on('joinOnlineRoom',({room})=>{
             socket.join(room)
             console.log(room, "Someone has joined To see you")
         })
+
         socket.on('disconnect', () => {
             console.log('User disconnected');
         });

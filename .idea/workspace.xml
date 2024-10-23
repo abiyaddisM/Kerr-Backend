@@ -8,7 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91f9746a-c2a4-4bf7-bc69-ab24e37e3812" name="Changes" comment="klsad">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/socketIO.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/socketIO.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -222,15 +221,7 @@
       <workItem from="1729579344144" duration="2867000" />
       <workItem from="1729585305869" duration="4702000" />
       <workItem from="1729661547056" duration="602000" />
-      <workItem from="1729671891404" duration="5760000" />
-    </task>
-    <task id="LOCAL-00012" summary="klsad">
-      <option name="closed" value="true" />
-      <created>1728501347437</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1728501347437</updated>
+      <workItem from="1729671891404" duration="6107000" />
     </task>
     <task id="LOCAL-00013" summary="klsad">
       <option name="closed" value="true" />
@@ -616,7 +607,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729688239554</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="klsad">
+      <option name="closed" value="true" />
+      <created>1729688646542</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1729688646542</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
