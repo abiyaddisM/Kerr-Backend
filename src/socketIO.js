@@ -19,6 +19,12 @@ exports.initializeSocket  = (server)=>{
             socket.join(room)
             console.log(room)
         })
+
+        socket.on('online',(room)=>{
+            socket.join(room)
+            io.to(room).emit('online',{online:true});
+        })
+
         socket.on('disconnect', () => {
             console.log('User disconnected');
         });
