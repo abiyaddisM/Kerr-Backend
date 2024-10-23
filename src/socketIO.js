@@ -36,8 +36,7 @@ exports.initializeSocket  = (server)=>{
             const userID = onlineUsers[socket.id]; // Get user ID from the mapping
             if (userID) {
                 // Optionally, you can find the room here if you need to notify specific rooms
-                const room = Object.keys(socket.rooms).find(r => r !== socket.id);
-                io.to('online-' + room).emit('online', { online: false, userID }); // Notify others that the user has gone offline
+                io.to('online-' + userID).emit('online', { online: false, userID }); // Notify others that the user has gone offline
                 delete onlineUsers[socket.id]; // Remove the user from the online list
                 console.log('User disconnected:', userID);
             } else {
