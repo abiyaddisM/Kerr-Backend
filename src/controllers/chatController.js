@@ -3,10 +3,9 @@ exports.getChat = async (req,res)=>{
     try{
         const {userID} = req.query;
         const [rows] = await pool.query('CALL sp_GetChat(?)',[userID]);
-       /* for (const d of rows.data[0]) {
+        for (const d of rows[0]) {
             console.log(d)
-        }*/
-        console.log(rows[0])
+        }
         res.status(200).json(rows);
 
     }catch (error){
