@@ -23,6 +23,7 @@ exports.initializeSocket  = (server)=>{
         socket.on('online',(room)=>{
             socket.join(room)
             io.to(room).emit('online',{online:true});
+            console.log(room, "Has joined")
         })
 
         socket.on('disconnect', () => {
