@@ -1,10 +1,13 @@
 const pool = require('../database');
+const GlobalData = require('../utils/global');
+
 exports.getChat = async (req,res)=>{
     try{
         const {userID} = req.query;
         const [rows] = await pool.query('CALL sp_GetChat(?)',[userID]);
-        for (const d of rows[0]) {
-            console.log(d)
+        for (const row of rows[0]) {
+            const isOnline = Object.values(GlobalData.onlineUsers).includes(row.userID);
+            console.log(row.userID," ",isOnline)
         }
         res.status(200).json(rows);
 
