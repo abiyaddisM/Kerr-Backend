@@ -6,7 +6,7 @@ exports.getChat = async (req,res)=>{
        /* for (const d of rows.data[0]) {
             console.log(d)
         }*/
-        console.log(rows)
+        console.log(rows[0])
         res.status(200).json(rows);
 
     }catch (error){
