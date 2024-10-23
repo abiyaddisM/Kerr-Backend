@@ -1,7 +1,6 @@
 const socketIo = require('socket.io');
-
+const GlobalData = require('./utils/global');
 let io;
-const onlineUsers = {};
 exports.initializeSocket  = (server)=>{
      io = socketIo(server, {
         cors: {
@@ -21,7 +20,7 @@ exports.initializeSocket  = (server)=>{
         })
 
         socket.on('online',({room,id})=>{
-            onlineUsers[socket.id] = id
+            GlobalData.onlineUsers[socket.id] = id
             socket.join(room)
             io.to(room).emit('online',{online:true,userID:id});
             console.log(room, "Has joined and is Online")
@@ -30,16 +29,17 @@ exports.initializeSocket  = (server)=>{
         socket.on('joinOnlineRoom',({room,id})=>{
             socket.join(room)
             const isOnline = Object.values(onlineUsers).includes(id);
-            socket.emit('userOnlineStatus', { id, online: isOnline });
+            socket.to(room).emit('userOnlineStatus', { id, online: isOnline });
             console.log(room, "Someone has joined To see you")
         })
 
         socket.on('disconnect', () => {
-            const userID = onlineUsers[socket.id]; // Get user ID from the mapping
+            const userID = GlobalData.onlineUsers[socket.id]; // Get user ID from the mapping
+            GlobalD
             if (userID) {
                 // Optionally, you can find the room here if you need to notify specific rooms
                 io.to('online-' + userID).emit('online', { online: false, userID }); // Notify others that the user has gone offline
-                delete onlineUsers[socket.id]; // Remove the user from the online list
+                delete GlobalData.onlineUsers[socket.id]; // Remove the user from the online list
                 console.log('User disconnected:', userID);
             } else {
                 console.log('User disconnected without a registered ID');
