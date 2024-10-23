@@ -21,7 +21,8 @@ exports.postMessage = async (req, res) => {
         await pool.query(query, [userID, chatID, messageText, JSON.stringify(messageImage), messageType]);
 
         const [rows] = await pool.query('SELECT @insertedMessageID AS messageID, @otherUserID AS otherUserID, @timestamp AS timestamp');
-
+        const date = new Date(rows[0].timestamp);
+        const isoString = date.toISOString();
         const newMessage = {
             id: rows[0].messageID,
             user_id: userID,
@@ -29,9 +30,8 @@ exports.postMessage = async (req, res) => {
             message_text: messageText,
             message_image: messageImage,
             messageType,
-            created_at: rows[0].timestamp  // Use the returned timestamp
+            created_at: isoString  // Use the returned timestamp
         };
-
         console.log("Rows returned: ", rows);
 
         // Emit the message to the other user via Socket.IO
