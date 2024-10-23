@@ -7,7 +7,7 @@ exports.getChat = async (req,res)=>{
         const [rows] = await pool.query('CALL sp_GetChat(?)',[userID]);
         for (const row of rows[0]) {
             const isOnline = Object.values(GlobalData.onlineUsers).includes(row.userID);
-            console.log(row.userID," ",isOnline)
+            console.log(row.userID,isOnline)
         }
         res.status(200).json(rows);
 
