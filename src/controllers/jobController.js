@@ -92,9 +92,9 @@ exports.getJobOffer = async (req,res) =>{
 exports.postJobContract = async (req,res) =>{
     try{
         const {id} = req.params;
-        const {clientID,freelanceID} = req.body;
-        const query = "CALL sp_InsertJobContract(?,?,?)";
-        const [rows] = await pool.query(query,[clientID,freelanceID,id]);
+        const {clientID,freelanceID,price = -1} = req.body;
+        const query = "CALL sp_InsertJobContract(?,?,?,?)";
+        const [rows] = await pool.query(query,[clientID,freelanceID,id,price]);
         res.status(201).send({data:rows[0]});
     }catch(e){
         console.log('Job Contract Error: ',e);
