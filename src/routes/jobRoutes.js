@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {getJob,getAllJob,postJob,deleteJob,postJobCompletionRequest,getJobBid,getJobOffer,postJobContract,getJobCompletionRequest,finishJob} = require( '../controllers/jobController.js');
+const {getJob,getAllJob,deleteJobCompletionRequest,postJob,deleteJob,postJobCompletionRequest,getJobBid,getJobOffer,postJobContract,getJobCompletionRequest,finishJob} = require( '../controllers/jobController.js');
 
 router
     .route('/')
@@ -19,7 +19,7 @@ router
     .route('/:id/complete')
     .post(postJobCompletionRequest)
     .get(getJobCompletionRequest)
-    .delete(getJobCompletionRequest)
+    .delete(deleteJobCompletionRequest)
 
 router
     .route('/:id/finish')
