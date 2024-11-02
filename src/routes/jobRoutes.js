@@ -19,6 +19,7 @@ router
     .route('/:id/complete')
     .post(postJobCompletionRequest)
     .get(getJobCompletionRequest)
+    .delete(getJobCompletionRequest)
 
 router
     .route('/:id/finish')
